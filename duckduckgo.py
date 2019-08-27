@@ -46,7 +46,7 @@ def query(query, useragent='python-duckduckgo '+str(__version__), safesearch=Tru
         'd': meanings,
         }
     params.update(kwargs)
-    encparams = urllib.urlencode(params)
+    encparams = urllib.request.urlencode(params)
     url = 'http://api.duckduckgo.com/?' + encparams
 
     response = urllib.request.urlopen(url)
